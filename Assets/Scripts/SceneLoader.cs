@@ -11,6 +11,7 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
+
     public void GameReset()
     {
         SceneManager.LoadScene(0);
