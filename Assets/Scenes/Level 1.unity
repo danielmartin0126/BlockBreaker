@@ -3285,9 +3285,29 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8577864846431056162, guid: 4ad1c989c2a724056b9c52760505403b,
         type: 3}
+      propertyPath: ballSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8577864846431056162, guid: 4ad1c989c2a724056b9c52760505403b,
+        type: 3}
       propertyPath: paddle1
       value: 
       objectReference: {fileID: 1925589338}
+    - target: {fileID: 8577864846431056162, guid: 4ad1c989c2a724056b9c52760505403b,
+        type: 3}
+      propertyPath: ballSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: bda0fe3e323ea4be69dbe9d08eb784a9, type: 3}
+    - target: {fileID: 8577864846431056162, guid: 4ad1c989c2a724056b9c52760505403b,
+        type: 3}
+      propertyPath: ballSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 39809509147de437fae91afb998982ea, type: 3}
+    - target: {fileID: 8577864846431056162, guid: 4ad1c989c2a724056b9c52760505403b,
+        type: 3}
+      propertyPath: ballSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2340c2f911edd48c0a4210f29f02f3cf, type: 3}
     - target: {fileID: 8577864846431056185, guid: 4ad1c989c2a724056b9c52760505403b,
         type: 3}
       propertyPath: m_Name
@@ -3367,7 +3387,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
