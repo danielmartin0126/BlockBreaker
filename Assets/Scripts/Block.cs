@@ -17,10 +17,10 @@ public class Block : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        NewMethod();
+        BlockCollision();
     }
 
-    private void NewMethod()
+    private void BlockCollision()
     {
         AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position);
         Destroy(gameObject);
