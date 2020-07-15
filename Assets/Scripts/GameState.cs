@@ -14,6 +14,11 @@ public class GameState : MonoBehaviour
 
     //cached reference
 
+    private void Awake()
+    {
+        int gameStateCount = FindObjectsofType<GameState>;
+    }
+
     private void Start()
     {
         scoreText.text = currentScore.ToString();
