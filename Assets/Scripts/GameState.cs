@@ -16,7 +16,16 @@ public class GameState : MonoBehaviour
 
     private void Awake()
     {
-        int gameStateCount = FindObjectsofType<GameState>;
+        int gameStateCount = FindObjectsOfType<GameState>().Length;
+        if (gameStateCount > 1)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     private void Start()
