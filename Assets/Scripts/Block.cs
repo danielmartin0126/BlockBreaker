@@ -4,13 +4,24 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
+    // config params
     [SerializeField] AudioClip breakSound;
     [SerializeField] GameObject blockSparklesVFX;
+    [SerializeField] int maxHits;
+    [SerializeField] Sprite[] hitSprites;
 
     // cached reference
     Level level;
 
+    // state variables
+    [SerializeField] int timesHit;
+
     private void Start()
+    {
+        CountBreakableBlocks();
+    }
+
+    private void CountBreakableBlocks()
     {
         level = FindObjectOfType<Level>();
         if (tag == "Breakable")
@@ -23,10 +34,29 @@ public class Block : MonoBehaviour
     {
         if (tag == "Breakable")
         {
+            handleHit();
+        }
+
+
+    }
+
+    private void handleHit()
+    {
+        timesHit++;
+        if (timesHit >= maxHits)
+        {
             BlockCollision();
         }
-        
+        else
+        {
+            ShowNextHitSprite();
+        }
+    }
 
+    private void ShowNextHitSprite()
+    {
+        int spriteIndex = timesHit - 1;
+        GetComponent<SpriteRenderer>().sprite = hitSprites[spriteIndex];
     }
 
     private void BlockCollision()
